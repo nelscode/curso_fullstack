@@ -80,6 +80,19 @@ console.log(contador%=passo)
 // NaN, isso não funciona com tipos de dados que não sejam um number
 const nome = 'Nelson'
 console.log(contador*=nome) // resultado é NaN (not a number)
-// sempre que os NaN aparecerem é porque os tipos de dados são incongruentes
+// sempre que os NaN aparecerem é porque os tipos de dados são incongruentes um com o outro
 
-// Conversão 27:41
+// Conversão (se o conteúdo da string for um numero, podemos converter)
+const numeroString = '10' // isso é uma string
+const numeroString2 = '5.5' // string também
+const numeroStringInt = parseInt(numeroString) // usamos o parseInt para converter para um número inteiro
+console.log(typeof numeroStringInt, numeroStringInt) // 10
+const numeroString2Float = parseFloat(numeroString2) // usamos o parseFloat para converter para um número flutuante
+console.log(typeof numeroString2Float, numeroString2Float) // 5.5
+
+// Porém, o Number() é um método mais novo e funciona da mesma forma, ele verifica se é int, float e converte automaticamente
+const numeroString3 = '5.5' // string > float
+const numeroString4 = '10' // string > integer
+const numeroStringNumber = Number(numeroString3) // conversão automática
+const numeroStringNumber2 = Number(numeroString4) // conversao automática
+console.log(numeroStringNumber, numeroStringNumber2)
