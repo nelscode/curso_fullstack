@@ -74,7 +74,55 @@ console.log(calculoResoluto) // assim resolvemos o problema da imprecisão com c
 
 // Objeto Math
 
+// Arrendondando um número
+
 let meuNumero = 1.5
 console.log(Math.floor(meuNumero)) // Math.floor arredonda o numero para baixo (1)
 console.log(Math.ceil(meuNumero)) // Math.ceil arredonda o numero para cima (2)
 console.log(Math.round(meuNumero)) // arredonda para o número inteiro mais proximo (até 4 arredonda para baixo, e a partir de 5 arredonda para cima)
+
+// Menor e maior número
+
+let meusNumeros = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10] // array de números 
+// utilizamos ... (três pontos) antes da array se desejarmos utilizar essas funções da biblioteca nela
+console.log(Math.max(...meusNumeros)) // Quando utilizamos o max ele nos trás o maior número da array
+console.log(Math.min(...meusNumeros)) // Quando utilizamos o min ele retorna o menor número da array
+
+console.log(Math.max(10, 20, 30, 40, 50, -100)) // forma normal de uso do max
+console.log(Math.min(10, 20, 30, 40, 50, -100)) // forma normal de uso do min
+
+// Randomizando números
+
+let numeroAleatorio = Math.random() // random() gera um número flutuante aleatório entre 0 e 1 
+console.log(numeroAleatorio)
+console.log(Number.isInteger(numeroAleatorio)) // o número é float
+
+let numeroAleatorio2 = Math.round(Math.random() * 10) // gerando numero aleátorio entre 0 e 10
+console.log(numeroAleatorio2)
+console.log(Number.isInteger(numeroAleatorio2)) // Depois de arredondado ele se torna um inteiro
+
+// Descobrindo o valor de PI 
+ 
+let pi = Math.PI // usamos o .PI para conseguir o valor de PI
+console.log(pi) // 3.14
+
+// Potêncialização com Math 
+
+let pow = Math.pow(12, 2) // é o mesmo que dizer '12 elevado ao 4'
+console.log(pow)
+
+let pow2 = 12 ** 2 // elevando 12 ao quadrado com matématica básica
+console.log(pow2)
+
+// Descobrindo a raiz quadrada de um número 
+
+let sqrt = Math.sqrt(144) // Descobrindo a raiz quadrada de 144
+console.log(sqrt)
+
+let sqrt2 = 144 ** (1/2) // pegando raiz quadrada de um número com matématica simples
+console.log(sqrt2)
+
+// Tipo de dado infinity 
+
+console.log(100 / 0) // Quanto mais próximo do 0 o JavaScript chega maior o número
+console.log(!!(100 / 0)) // e ele avalia isso como true
