@@ -45,8 +45,9 @@ const pessoaFicticia = {
 
     // Métodos
     saudacao(){
-        console.log(`Olá, eu me chamao ${pessoaFicticia.nome}`)
+        console.log(`Olá, eu me chamao ${this.nome} ${this.sobrenome}`) // dentro desse contexto, a palavra this referencia o objeto pessoaFicticia (this é o objeto em si)
+        
     } // é uma pequena função dentro do objeto
 }
 
-// saudacao() deu erro, continuar aula em 14:06
+pessoaFicticia.saudacao() // chamando método do objeto
