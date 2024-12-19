@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azulDigisac: #52658C;
+    --brancoDigisac: #F9FBFF; 
+    --azulHoverDigisac: #404F6F;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    background-color: var(--azulDigisac);
+}
+
+.container {
+    margin: 3rem auto;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--brancoDigisac);
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.description {
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.form, .label-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    gap: 1.1rem;
+}
+
+.label-inputs {
+    gap: 0.5rem;
+}
+
+.labels, .buttonSubmit {
+    font-size: 1.1rem;
+}
+
+.inputs {
+    padding: 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+}
+
+.buttonSubmit {
+    background-color: #52658C;
+    border: none;
+    color: white;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.buttonSubmit:hover {
+    background-color: var(--azulHoverDigisac);
+}
