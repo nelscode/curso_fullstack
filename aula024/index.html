@@ -5,48 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content="html, css, js, modelo para exercicios" />
-    <meta name="description" content="um modelo de site para os próximos exercicios"/>
+    <meta
+      name="description"
+      content="um modelo de site para os próximos exercicios"
+    />
     <meta name="author" content="Nelso Martins" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!----------------->
 
-    <title>Modelo Exércicios</title>
+    <title>IMC - Cálculo de Índice de Massa Corporal</title>
   </head>
   <body>
     <section class="container">
-      <h1 class="title">Título</h1>
-      <p class="description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-        quidem voluptas blanditiis! Dolore aspernatur, recusandae in atque nihil
-        vel id? Perspiciatis nulla ad placeat laborum? Eligendi iusto dolore
-        suscipit facere.
-      </p>
+      <h1 class="title">Tabela IMC</h1>
+
+      <section class="sectionDesc">
+        <section>
+          <h2 class="titleIMC">IMC</h2>
+          <p class="imc">
+            Menor que 18,5 <br />
+            Entre 18,5 e 24,9 <br />
+            Entre 25,0 e 29,9 <br />
+            Entre 30,0 e 39,9 <br />
+            Maior que 40,0
+          </p>
+        </section>
+        <section>
+          <h2 class="titleResultado">Resultado</h2>
+          <p class="resultado">
+            Magreza <br />
+            Normal <br />
+            Sobrepeso <br />
+            Obesidade <br />
+            Obesidade Grave
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h2>Calcule seu IMC</h2>
+      </section>
 
       <form class="form">
         <section class="label-inputs">
-            <label for="input-teste-1" class="labels">Label teste #1</label>
-            <input type="text" name="" id="input-teste-1" class="inputs"/>
+          <label for="peso" class="labels">Peso:</label>
+          <input type="number" name="" id="peso" class="inputs" required />
         </section>
 
         <section class="label-inputs">
-            <label for="input-teste-2" class="labels">Label teste #2</label>
-            <input type="text" name="" id="input-teste-2" class="inputs"/>
-        </section>
-
-        <section class="label-inputs">
-            <label for="input-teste-3" class="labels">Label teste #3</label>
-            <input type="text" name="" id="input-teste-3" class="inputs"/>
-        </section>
-
-        <section class="label-inputs">
-            <label for="input-teste-4" class="labels">Label teste #4</label>
-            <input type="text" name="" id="input-teste-4" class="inputs"/>
+          <label for="altura" class="labels">Altura:</label>
+          <input type="number" name="" id="altura" class="inputs" required />
         </section>
       </form>
 
-      <button class="buttonSubmit">Enviar</button>
+      <button id="buttonSubmit">Enviar</button>
     </section>
 
     <!-- JS -->
