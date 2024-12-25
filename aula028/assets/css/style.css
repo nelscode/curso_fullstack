@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelhoOneBit: #EF2E3C;
+    --brancoOneBit: #FFFFFF; 
+    --pretoOneBit: #171717;
+
+
+    --Fontsaira: "Saira", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Fontsaira);
+    background-color: var(--pretoOneBit);
+}
+
+.container {
+    margin: 3rem auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--brancoOneBit);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.vermelhoOneBit {
+    color: var(--vermelhoOneBit);
+}
+
