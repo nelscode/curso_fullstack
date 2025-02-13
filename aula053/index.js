@@ -20,11 +20,15 @@ function criarPesosa(nome, sobrenome, idade, peso, altura){ // isso é uma funç
         get falarNome() { // quando utilizamos a palavra get fazemos a função se comportar como um simples atributo
             return `${nome}`
         },
-        // seeter
         get nomeCompleto(){ // esse método basico junta o nome e o sobrenome
-            return `${nome} ${sobrenome}`
+            return `${this.nome} ${this.sobrenome}`
+        },
+        // setter - Setando valores automaticamente
+        set meuNome(valor){
+            valor = valor.split(' '); // criando string e adicionando valores, split divide uma string nos espaços
+            this.nome = valor.shift(); // setando o primeiro elemento da array como valor de nome;
+            this.sobrenome = valor.join(' '); // setando o resto da array como valor de sobrenome;
         }
-
     };
 }
 
@@ -39,4 +43,10 @@ console.log(primeiraPessoa.falarNome); // se tentarmos usar como função dará 
 
 primeiraPessoa.nomeCompleto = 'Maria Eduarda Jacinto Silva'; // isso vai ser o valor passado para o parametro
 
-console.log(primeiraPessoa.nomeCompleto);
+console.log(primeiraPessoa.nomeCompleto); // exibindo 
+
+primeiraPessoa.meuNome = 'Nelson Martins Fernandes'; 
+
+console.log(primeiraPessoa.nome, primeiraPessoa.sobrenome); 
+
+// Apos criar a função construtora podemos criar diversos objetos rapidamente!
